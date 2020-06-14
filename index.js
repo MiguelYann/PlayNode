@@ -11,10 +11,9 @@ readFile('/tmp/test.md', 'utf8', (error, fileContent) => {
   console.log(typeof fileContent);
 });
 
+//Create HTTP server
 
-//Create HTTP server 
-
-createServer((req, res) => {
+const app = createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write(`
   <html>
@@ -27,4 +26,6 @@ createServer((req, res) => {
 
   console.log(`App listen on ${PORT}`);
   res.end();
-}).listen(PORT);
+});
+
+app.listen(PORT);
