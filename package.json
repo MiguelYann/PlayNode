@@ -1,0 +1,11 @@
+{
+  "name": "testfileio",
+  "version": "1.0.0",
+  "description": "test IO",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Miguel",
+  "license": "ISC"
+}
