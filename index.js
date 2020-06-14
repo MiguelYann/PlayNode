@@ -1,7 +1,28 @@
+const { createServer } = require('http');
 const { readFile } = require('fs');
+
+const PORT = 8080;
+
+// Read on file
 
 readFile('/tmp/test.md', 'utf8', (error, fileContent) => {
   if (error) throw error;
   console.log(fileContent);
   console.log(typeof fileContent);
 });
+
+
+//Create HTTP server 
+
+createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write(`
+  <html>
+<h2 style="color:blue">Hello node.js</h2>
+  </html>
+  
+  `);
+
+  console.log(`App listen on ${PORT}`);
+  res.end();
+}).listen(PORT);
