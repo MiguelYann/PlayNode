@@ -18,7 +18,9 @@ createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write(`
   <html>
-<h2 style="color:blue">Hello node.js</h2>
+    <body>
+      <h2 style="color:blue">Hello node.js</h2>
+    </body>
   </html>
   
   `);
